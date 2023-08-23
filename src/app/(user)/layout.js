@@ -1,8 +1,8 @@
 import vazirFont from "@/constants/localFonts";
-import "./globals.css";
-import Header from "./Header";
+import "../globals.css";
+import Header from "../Header";
 import { Toaster } from "react-hot-toast";
-import Providers from "./Providers";
+import Providers from "../Providers";
 
 export const metadata = {
     title: "Admin Shop Panel",

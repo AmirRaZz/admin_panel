@@ -1,3 +1,4 @@
+import Loading from "@/common/Loading";
 import TextField from "@/common/TextField";
 
 const SendOTPForm = ({ phoneNumber, onChange, onSubmit, isLoading }) => {
@@ -12,7 +13,7 @@ const SendOTPForm = ({ phoneNumber, onChange, onSubmit, isLoading }) => {
                 />
                 <div>
                     {isLoading ? (
-                        <p>Loading...</p>
+                        <Loading/>
                     ) : (
                         <button
                             type="submit"

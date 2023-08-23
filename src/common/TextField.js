@@ -1,7 +1,7 @@
 const TextField = ({ label, name, value, onChange }) => {
     return (
         <div>
-            <label htmlFor={name} className="block mb-4">
+            <label htmlFor={name} className="block mb-2">
                 {label}
             </label>
             <input

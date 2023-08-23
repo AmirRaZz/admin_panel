@@ -1,6 +1,7 @@
 import OTPInput from "react-otp-input";
 import {HiArrowNarrowRight} from "react-icons/hi"
 import {CiEdit} from "react-icons/ci"
+import Loading from "@/common/Loading";
 
 const CheckOTPForm = ({
     onSubmit,
@@ -51,7 +52,7 @@ const CheckOTPForm = ({
                 />
                 <div>
                     {isCheckingOtp ? (
-                        <p>Loading...</p>
+                        <Loading/>
                     ) : (
                         <button
                             type="submit"

@@ -15,7 +15,13 @@ export const completeProfile = (data) => {
 };
 
 export const getUserProfile = () => {
-    return http
-        .get("/user/profile")
-        .then(({ data }) => data.data);
+    return http.get("/user/profile").then(({ data }) => data.data);
+};
+
+export const updateProfile = (data) => {
+    return http.patch("/user/update", data).then(({ data }) => data.data);
+};
+
+export const logOut = () => {
+    return http.post("/user/logout");
 };

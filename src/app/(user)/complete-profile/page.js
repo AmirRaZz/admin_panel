@@ -1,5 +1,6 @@
 "use client";
 
+import Loading from "@/common/Loading";
 import TextField from "@/common/TextField";
 import { completeProfile } from "@/services/authServices";
 import { useMutation } from "@tanstack/react-query";
@@ -43,7 +44,7 @@ const CompleteProfile = () => {
                     />
                     <div>
                         {isLoading ? (
-                            <p>Loading...</p>
+                            <Loading/>
                         ) : (
                             <button
                                 type="submit"
