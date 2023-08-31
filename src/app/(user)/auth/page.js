@@ -11,7 +11,7 @@ import { useRouter } from "next/navigation";
 
 const RESEND_TIME = 90;
 const AuthPage = () => {
-    const [phoneNumber, setPhoneNumber] = useState("09375964392");
+    const [phoneNumber, setPhoneNumber] = useState("09175959155");
     const [step, setStep] = useState(2);
     const [otp, setOtp] = useState("");
     const router=useRouter()

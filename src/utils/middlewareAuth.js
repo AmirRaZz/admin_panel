@@ -1,3 +1,4 @@
+
 const middlewareAuth = async (req) => {
     let strCookie = "";
     req.cookies.getAll().forEach((item) => {
@@ -10,7 +11,7 @@ const middlewareAuth = async (req) => {
             method: "GET",
             credentials: "include",
             headers: {
-                Cookie: strCookie,
+                Cookie: strCookie
                 // `${req.cookies.get("accessToken")?.name}=${
                 //     req.cookies.get("accessToken")?.value
                 // }; ${req.cookies.get("refreshToken")?.name}=${

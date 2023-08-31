@@ -26,6 +26,9 @@ const SideBar = () => {
                 <Link href="/profile/me">اطلاعات کاربری</Link>
             </li>
             <li>
+                <Link href="/profile/payments">سفارشات</Link>
+            </li>
+            <li>
                 <button onClick={logOutHandler}>خروج از حساب کاربری</button>
             </li>
         </ul>
