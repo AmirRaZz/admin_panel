@@ -25,3 +25,10 @@ export const updateProfile = (data) => {
 export const logOut = () => {
     return http.post("/user/logout");
 };
+
+
+// admin related fetches :
+
+export const getAllUsers = () => {
+    return http.get("/admin/user/list").then(({ data }) => data.data);
+};
