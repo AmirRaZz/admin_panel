@@ -29,6 +29,10 @@ export const addProduct = (data) => {
     return http.post(`/admin/product/add`, data).then(({ data }) => data.data);
 };
 
+export const removeProduct = (id) => {
+    return http.delete(`/admin/product/remove/${id}`).then(({ data }) => data.data);
+};
+
 export const updateProduct = ({productId, data}) => {
     return http
         .patch(`/admin/product/update/${productId}`, data)

@@ -8,18 +8,18 @@ import { useRouter } from "next/navigation";
 import { useQueryClient } from "@tanstack/react-query";
 
 function ProductListTable({ products }) {
-  // const { mutateAsync } = useRemoveProduct();
-  // const queryClient = useQueryClient();
+  const { mutateAsync } = useRemoveProduct();
+  const queryClient = useQueryClient();
 
-  // const removeProductHandler = async (id) => {
-  //   try {
-  //     const { message } = await mutateAsync(id);
-  //     toast.success(message);
-  //     queryClient.invalidateQueries({ queryKey: ["get-products"] });
-  //   } catch (error) {
-  //     toast.error(error?.response?.data?.message);
-  //   }
-  // };
+  const removeProductHandler = async (id) => {
+    try {
+      const { message } = await mutateAsync(id);
+      toast.success(message);
+      queryClient.invalidateQueries({ queryKey: ["get-products"] });
+    } catch (error) {
+      toast.error(error?.response?.data?.message);
+    }
+  };
   return (
     <div className="shadow-sm overflow-auto my-8">
       <table className="border-collapse table-auto w-full min-w-[800px] text-sm">
